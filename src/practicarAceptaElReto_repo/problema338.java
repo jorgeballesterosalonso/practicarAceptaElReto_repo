@@ -1,6 +1,5 @@
 package practicarAceptaElReto_repo;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
@@ -23,31 +22,26 @@ public class problema338 {
 				examenes.put(i, exam);
 
 			}
-			ArrayList<Integer> memoria = new ArrayList<Integer>();
+			LinkedHashSet<Integer> memoria = new LinkedHashSet<Integer>();
 
-			for (int i = 1; i <= cant; i++) {
-
-				for (int j = 1; j <= mem; j++) {
-					memoria.add(examenes.get(j));
-
-				}
-
+			// Copias detectadas
+			for (int i = 1; i <= mem + 1; i++) {
+				memoria.add(examenes.get(i));
+				
 			}
-
 			// Averiguar copias totales
 			LinkedHashSet<Integer> copiastot = new LinkedHashSet<Integer>();
 			for (int i = 1; i <= cant; i++) {
 				copiastot.add(examenes.get(i));
-			}
-			int totalcopias = examenes.size()-copiastot.size();
-			System.out.println(totalcopias);
-			//copias totales terminado
 
+			}
+			int totalcopias = examenes.size() - copiastot.size();
+			// copias totales terminado
+
+			System.out.println(totalcopias);
 			System.out.println(examenes.toString());
 			System.out.println(memoria.toString());
 
 		}
-
 	}
-
 }
