@@ -1,3 +1,5 @@
+package practicarAceptaElReto_repo;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
